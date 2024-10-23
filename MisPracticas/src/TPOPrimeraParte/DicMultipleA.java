@@ -2,12 +2,12 @@ package TPOPrimeraParte;
 
 public class DicMultipleA implements DiccionarioMultipleTDA {
 	class Elemento{
-		int clave;
-		int[] valores;
-		int cantValores;
+		public int clave;
+		public int[] valores;
+		public int cantValores;
 	}
-	Elemento[] elementos;
-	int cantClaves;
+	public Elemento[] elementos;
+	public int cantClaves;
 	
 	public void InicializarDiccionario() {
 		elementos = new Elemento [100];

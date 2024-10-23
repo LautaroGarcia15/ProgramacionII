@@ -1,9 +1,23 @@
 package ColaConPrioridadTDA;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
 	public static void main(String[] args) {
-		ColaPrioridadTDA cola1 = new ColaPrioridadTDA1();
+		ColaPrioridadTDA colaPrioridadDinamica = new ColaPrioridadDinamica();
+		colaPrioridadDinamica.InicializarCola();
+		
+		colaPrioridadDinamica.AcolarPrioridad(5, 1);
+		colaPrioridadDinamica.AcolarPrioridad(6, 1);
+		colaPrioridadDinamica.AcolarPrioridad(7, 1);
+		colaPrioridadDinamica.AcolarPrioridad(9, 1);
+		colaPrioridadDinamica.AcolarPrioridad(1, 2);
+		
+		System.out.println(encontrarPrioridad(colaPrioridadDinamica,1));
+		
+		/*ColaPrioridadTDA cola1 = new ColaPrioridadTDA1();
 		ColaPrioridadTDA cola2 = new ColaPrioridadTDA1();
 		ColaTDA colaNormal = new ColaEstrategia1();
 		
@@ -32,8 +46,22 @@ public class Main {
 		
 		//InvertirCola(colaNormal);
 		
-		System.out.println(SumarPares(cola1));
+		System.out.println(SumarPares(cola1));*/
 		
+	}
+	//ejercicio Cola Con Prioridad Dinamica
+	public static List encontrarPrioridad(ColaPrioridadTDA colaDinamica, int prioridad) {
+		List<Integer> valores = new ArrayList<>();
+		while(!colaDinamica.ColaVacia()){
+			
+			if(colaDinamica.Prioridad() == prioridad) {
+				valores.add(colaDinamica.Primero());
+			}
+			
+			colaDinamica.Desacolar();
+			
+		}
+		return valores;
 	}
 	
 	public static void CombinarColas(ColaPrioridadTDA c1, ColaPrioridadTDA c2) {

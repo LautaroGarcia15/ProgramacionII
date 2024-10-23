@@ -3,7 +3,25 @@ package PilaTDA;
 public class Main {
 
 	public static void main(String[] args) {
-		TDAPila pila1 = new PilaTI(); //Este tipo de pilas sirve mas para pasar de una pila a otra
+		TDAPila pila = new PilaDinamica();
+		
+		pila.InicializarPila();
+		
+		pila.Apilar(2);
+		pila.Apilar(8);
+		pila.Apilar(5);
+		pila.Apilar(3);
+		
+		System.out.println( pila.Tope());
+		
+		pila.Desapilar();
+		
+		pila.PilaVacia();
+		
+		System.out.println( pila.Tope());
+		
+		
+		/*TDAPila pila1 = new PilaTI(); //Este tipo de pilas sirve mas para pasar de una pila a otra
 		TDAPila pila2 = new PilaTF();
 		TDAPila pila3 = new PilaTI();
 		TDAPila pila4 = new PilaTF();
@@ -119,7 +137,7 @@ public class Main {
 			pila.Apilar(pilaAux2.Tope());
 			pilaAux2.Desapilar();
 			System.out.println(pila.Tope());
-		}
+		}*/
 
 	}
 

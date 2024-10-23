@@ -6,7 +6,20 @@ import java.util.List;
 public class Main {
 
 	public static void main(String[] args) {
-		ColaTDA cola1 = new ColaEstrategia1();
+		ColaTDA colaDinamica = new ColaDinamica();
+		
+		colaDinamica.InicializarCola();
+		
+		colaDinamica.Acolar(1);
+		colaDinamica.Acolar(2);
+		colaDinamica.Acolar(3);
+		colaDinamica.Acolar(4);
+		
+		System.out.println(encontrarElemento(colaDinamica, 3));
+		
+
+		
+		/*ColaTDA cola1 = new ColaEstrategia1();
 		ColaTDA cola2 = new ColaEstrategia2();
 		ColaTDA cola3 = new ColaEstrategia3();
 		ColaTDA cola4 = new ColaEstrategia1();
@@ -42,8 +55,19 @@ public class Main {
 		
 		//invertirColaPilas(cola1);
 		
-		//invertirCola(cola1);
+		//invertirCola(cola1);*/
 		
+	}
+	
+	//Ejercicio de cola dinamica
+	public static boolean encontrarElemento(ColaTDA colaDinamica,int x) {
+		while(!colaDinamica.ColaVacia()) {
+			if(colaDinamica.Primero() == x) {
+				return true;
+			}
+			colaDinamica.Desacolar();
+		}
+		return false;
 	}
 	
 	public static void pasarDeUnaColaAOtra(ColaTDA origen, ColaTDA destino) {
