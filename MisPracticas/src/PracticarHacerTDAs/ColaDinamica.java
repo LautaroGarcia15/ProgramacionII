@@ -1,7 +1,7 @@
 package PracticarHacerTDAs;
 
 public class ColaDinamica implements ColaTDA{
-	class Nodo{
+	class Nodo {
 		int info;
 		Nodo sig;
 	}
@@ -21,7 +21,7 @@ public class ColaDinamica implements ColaTDA{
 		nuevo.sig = null;
 		
 		if(ultimo != null) {
-			nuevo.sig = ultimo;
+			ultimo.sig = nuevo;
 		}
 		ultimo = nuevo;
 		
@@ -48,5 +48,6 @@ public class ColaDinamica implements ColaTDA{
 	public int Primero() {
 		return primero.info;
 	}
+	
 
 }

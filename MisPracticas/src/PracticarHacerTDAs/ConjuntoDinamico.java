@@ -32,7 +32,7 @@ public class ConjuntoDinamico implements ConjuntoTDA{
 				actual = actual.sig;
 			}
 			if(actual.sig != null) {
-				actual = actual.sig.sig;
+				actual.sig = actual.sig.sig;
 			}
 		}
 	}
@@ -59,5 +59,6 @@ public class ConjuntoDinamico implements ConjuntoTDA{
 	public boolean ConjuntoVacio() {
 		return primero == null;
 	}
+
 	
 }

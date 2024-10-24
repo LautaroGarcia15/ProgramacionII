@@ -18,7 +18,8 @@ public class PilaDinamica implements PilaTDA {
 		nuevo.info = x;
 		nuevo.sig = primero;
 		primero = nuevo;
-	}
+		
+		}
 
 	@Override
 	public void Deasapilar() {
@@ -34,6 +35,4 @@ public class PilaDinamica implements PilaTDA {
 	public boolean PilaVacia() {
 		return primero == null;
 	}
-	
-
 }

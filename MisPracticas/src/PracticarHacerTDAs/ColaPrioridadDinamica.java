@@ -10,7 +10,7 @@ public class ColaPrioridadDinamica implements ColaPrioridadTDA{
 
 	@Override
 	public void InicializarCola() {
-		primero= null;
+		primero = null;
 	}
 
 	@Override
@@ -22,12 +22,15 @@ public class ColaPrioridadDinamica implements ColaPrioridadTDA{
 		if(primero == null || prioridad > primero.prioridad) {
 			nuevo.sig = primero;
 			primero = nuevo;
+			
 		}else {
+			
 			Nodo actual = primero;
 			while(actual.sig != null && actual.sig.prioridad >= prioridad) {
 				actual = actual.sig;
 			}
-			nuevo.sig =actual.sig;
+			
+			nuevo.sig = actual.sig;
 			actual.sig = nuevo;
 		}
 	}

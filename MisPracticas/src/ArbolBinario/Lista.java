@@ -1,4 +1,4 @@
-package ListaEnlazada;
+package ArbolBinario;
 
 public class Lista {
 	Nodo primero;
