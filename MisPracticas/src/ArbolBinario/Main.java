@@ -32,12 +32,5 @@ public class Main {
 			}
 		}
 	}
-	
-	public static void alturas(ArbolTDA arbol, Lista lista, int altura) {
-		int nivel = altura;
-		if(!arbol.EsVacio()) {
-			lista.add(arbol.Raiz()  nivel); 
-		}
-	}
 
 }

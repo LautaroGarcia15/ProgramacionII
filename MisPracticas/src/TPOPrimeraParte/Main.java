@@ -22,9 +22,7 @@ public class Main {
 		diccionario.Agregar(7, 4);
 		diccionario.Agregar(7, 5);
 
-		for(int i = 0; i<diccionario.cantClaves;i++) {
-			
-		}
+		
 		
 	}
 	
